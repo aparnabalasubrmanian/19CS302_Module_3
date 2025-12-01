@@ -17,22 +17,28 @@ To write a C program that reads a one-dimensional array of integers and replaces
 Developed by: Aparna RB
 RegisterNumber:  212222220005
 */
-#include <stdio.h> 
-int main() { 
-    int arr[100], n; 
-    scanf("%d", &n); 
-    for (int i = 0; i < n; i++) { 
-        scanf("%d", &arr[i]); 
-    } 
-    for (int i = 0; i < n; i++) { 
-        if (arr[i] % 2 == 0) 
-            printf("E "); 
-        else 
-            printf("%d ", arr[i]); 
-    } 
-    printf("\n"); 
-    return 0; 
-} 
+#include <stdio.h>
+
+int main()
+{
+    int n, i;
+    scanf("%d", &n);
+
+    int a[n];
+    for (i = 0; i < n; i++)
+        scanf("%d", &a[i]);
+
+    for (i = 0; i < n; i++)
+    {
+        if (a[i] % 2 == 0)
+            printf("E ");
+        else
+            printf("%d ", a[i]);
+    }
+
+    return 0;
+}
+ 
 ```
 
 ## Output:
