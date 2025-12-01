@@ -20,27 +20,30 @@ To write a C Program to convert a given decimal value to binary using function w
 Developed by: Aparna RB
 RegisterNumber:  212222220005
 */
-#include<stdio.h> 
-int dectobin(int d){ 
-int bin =0,base=1,rem; 
-while(d>0) 
-{ 
-rem=d%2; 
-bin=bin+rem*base; 
-d=d/2; 
-base=base*10; 
-} 
-printf(" = %d in binary",bin); 
-return 0; 
-} 
-int main() 
-{ 
-int dec; 
-scanf("%d",&dec); 
-printf("%d in decimal",dec); 
-dectobin(dec); 
-return 0; 
-} 
+#include <stdio.h>
+
+int convert(int n)
+{
+    int bin = 0, base = 1;
+    while (n > 0)
+    {
+        int r = n % 2;
+        bin = bin + r * base;
+        base *= 10;
+        n /= 2;
+    }
+    return bin;
+}
+
+int main()
+{
+    int n;
+    scanf("%d", &n);
+    int binary = convert(n);
+    printf("%d in decimal = %d in binary", n, binary);
+    return 0;
+}
+ 
 
 ```
 
