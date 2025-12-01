@@ -21,7 +21,7 @@ Developed by: Aparna RB
 RegisterNumber:  212222220005
 */
 #include<stdio.h> 
-Int dectobin(int d){ 
+int dectobin(int d){ 
 int bin =0,base=1,rem; 
 while(d>0) 
 { 
