@@ -14,30 +14,30 @@ To write a C program to read the elements and print only the odd elements in the
 
 ## Program:
 ```
-#include<stdio.h> 
-int main() 
-{ 
-int i,j,n,a[10][10]; 
-scanf("%d",&n); 
-for(i=0;i<n;i++) 
-{ 
-for(j=0;j<n;j++) 
-{ 
-scanf("%d",&a[i][j]); 
-} 
-}for(i=0;i<n;i++) 
-{ 
-for(j=0;j<=n;j++) 
-{ 
-if(a[i][j]%2==1) 
-{ 
-printf("a[%d][%d] is %d \n",i,j,a[i][j]); 
-} 
-} 
-printf("\n"); 
-} 
-return 0; 
+\*Name: Aparna R B
+  Register : 212222220005
+  */
+#include <stdio.h>
+
+int main()
+{
+    int n, i, j;
+    scanf("%d", &n);
+
+    int a[n][n];
+
+    for (i = 0; i < n; i++)
+        for (j = 0; j < n; j++)
+            scanf("%d", &a[i][j]);
+
+    for (i = 0; i < n; i++)
+        for (j = 0; j < n; j++)
+            if (a[i][j] % 2 != 0)
+                printf("a[%d][%d] is %d\n", i, j, a[i][j]);
+
+    return 0;
 }
+
 ```
 
 ## Output:
