@@ -18,22 +18,40 @@ To write a C program to check whether the given number is prime or not using fun
 Developed by: Aparna RB
 RegisterNumber:  212222220005
 */
-#include<stdio.h> 
-int main() 
-{ 
-int i; 
-scanf("%d",&i); 
-if(i%2==1 && i%1==0) 
-{ 
-printf("%d is a prime number.",i); 
- 
-} 
-else 
-{ 
-printf("%d is not a prime number.",i); 
-} 
-return 0; 
-} 
+
+#include <stdio.h>
+void checkPrime(int n);
+
+int main()
+{
+    int num;
+    scanf("%d", &num);
+
+    checkPrime(num); 
+    return 0;
+}
+void checkPrime(int n)
+{
+    int i, flag = 0;
+
+    if (n <= 1) {
+        printf("%d is not a prime number", n);
+        return;
+    }
+
+    for (i = 2; i <= n / 2; i++) {
+        if (n % i == 0) {
+            flag = 1;
+            break;
+        }
+    }
+
+    if (flag == 0)
+        printf("%d is a prime number", n);
+    else
+        printf("%d is not a prime number", n);
+}
+
 ```
 
 ## Output:
